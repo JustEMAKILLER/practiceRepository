@@ -1,31 +1,73 @@
-body{
-background-color:white; 
+:root{
+    --colorComponentes: rgba(245, 226, 226, 0.886);
 }
-button{
-    display: inline-block;
+
+body {
+    background-color: whitesmoke;
 }
-nav{
+
+nav {
     justify-content: center;
     position: fixed;
     height: 50px;
     display: flex;
     flex-flow: row nowrap;
-    background-color: rgb(162, 82, 82);
+    background-color: var(--colorComponentes);
     width: 100%;
 }
 
-#navOptions{
+#navOptions {
     gap: 5%;
     display: flex;
     align-items: center;
 }
 
-#items{
+#items {
     display: flex;
     flex-flow: column nowrap;
     gap: 25px;
 }
 
-.items-cards{
- background-color: blue;
+.items-cards {
+    background-color: var(--colorComponentes);
+    display: flex;
+}
+
+#articulo {
+    display: flex;
+    gap: 25px
+}
+
+#articulo section {
+    width: 60%;
+}
+
+#articulo section h1 {
+    margin-top: 10%;
+}
+
+aside {
+    padding:10px;
+    background-color: var(--colorComponentes);
+    width: 40%;
+    margin-top: 5%;
+    height: max-content;
+}
+
+#recomendations {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px
+}
+
+#logo {
+    position: absolute;
+    right: 95%;
+}
+
+#promoCodeButton{
+    color: blue;
+    border-radius: 15%;
+    background-color: rgb(159, 213, 227);
+
 }
