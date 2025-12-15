@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrito de Compras</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -12,23 +12,14 @@
     <nav>
         <img id="logo" src="img/market-stand-icon-1.png" alt="logo">
         <div id="navOptions">
-            <p>
-                Home
-            </p>
-            <p>
-                Men
-            </p>
-            <p>
-                Women
-            </p>
-            <p>
-                Accesories
-            </p>
+            <p>Home</p>
+            <p>Men</p>
+            <p>Women</p>
+            <p>Accessories</p>
         </div>
-        <div style="position: absolute; left: 95%; display: flex;">
+        <div class="nav-icons-container">
             <img src="img/carrito-de-compras.png" alt="buy">
             <img src="img/usuario.png" alt="user">
-        </div>
         </div>
     </nav>
     <article id="articulo">
@@ -36,112 +27,147 @@
             <h1>Your Shopping Cart (3 items)</h1>
             <p>Free shipping on orders over $500</p>
             <div id="items">
-                <div class="items-cards" style="padding: 15px;">
+                <!-- Primer producto (ya estructurado correctamente) -->
+                <div class="items-cards">
                     <img src="img/headphones.png" alt="headphones">
-                    <div class="Info&Management" style="display: flex; flex-flow: column nowrap; width: 80%; border-right: solid 1px black;">
-                    <div class="info"><p><b>Wireless Noise-Cancelling Headphones</b></p>
-                    <p>Size: One Size | Color: Matte Black</p></div>
-                    <div class="management" style="display: flex; flex-flow: row nowrap;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-trash">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M4 7l16 0" />
-                        <path d="M10 11l0 6" />
-                        <path d="M14 11l0 6" />
-                        <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
-                        <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
-                    </svg>
-                    <p>Remove</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                        class="icon icon-tabler icons-tabler-filled icon-tabler-heart">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path
-                            d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z" />
-                    </svg>
-                    <p>Save for Later</p></div></div>
-                    <div class="Price&CountButtons" style="width: 20%; display: flex; gap: 20px; flex-flow: column nowrap;">
-                        <p style="text-align:center;">$299</p>
-                        <div class="count-buttons" style="background-color: gray;">
-                        <button>-</button><span>1</span>
-                        <button>+</button></div>
+                    <div class="info-management">
+                        <div class="info">
+                            <p><b>Wireless Noise-Cancelling Headphones</b></p>
+                            <p>Size: One Size | Color: Matte Black</p>
+                        </div>
+                        <div class="management">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-trash">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                            </svg>
+                            <p>Remove</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-heart">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z" />
+                            </svg>
+                            <p>Save for Later</p>
+                        </div>
+                    </div>
+                    <div class="price-count">
+                        <p>$299</p>
+                        <div class="count-buttons">
+                            <button>-</button><span>1</span>
+                            <button>+</button>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Segundo producto (actualizado con la misma estructura) -->
                 <div class="items-cards">
                     <img src="img/chair.png" alt="chair">
-                    <p><b>Ergonomic Office Chair</b></p>
-                    <p>$150</p>
-                    <p>Size: Standard | Color: Slate Gray</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-trash">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M4 7l16 0" />
-                        <path d="M10 11l0 6" />
-                        <path d="M14 11l0 6" />
-                        <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
-                        <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
-                    </svg>
-                    <p>Remove</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                        class="icon icon-tabler icons-tabler-filled icon-tabler-heart">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path
-                            d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z" />
-                    </svg>
-                    <p>Save for Later</p>
-                    <div id="count-buttons">
-                        <button>-</button><span>1</span>
-                        <button>+</button>
+                    <div class="info-management">
+                        <div class="info">
+                            <p><b>Ergonomic Office Chair</b></p>
+                            <p>Size: Standard | Color: Slate Gray</p>
+                        </div>
+                        <div class="management">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-trash">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                            </svg>
+                            <p>Remove</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-heart">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z" />
+                            </svg>
+                            <p>Save for Later</p>
+                        </div>
+                    </div>
+                    <div class="price-count">
+                        <p>$150</p>
+                        <div class="count-buttons">
+                            <button>-</button><span>1</span>
+                            <button>+</button>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Tercer producto (actualizado con la misma estructura) -->
                 <div class="items-cards">
                     <img src="img/keyboard.png" alt="keyboard">
-                    <p><b>Mechanical Keyboard</b></p>
-                    <p>$89</p>
-                    <p>Switch: Cherry MX Brown | Color: White</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-trash">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M4 7l16 0" />
-                        <path d="M10 11l0 6" />
-                        <path d="M14 11l0 6" />
-                        <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
-                        <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
-                    </svg>
-                    <p>Remove</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                        class="icon icon-tabler icons-tabler-filled icon-tabler-heart">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path
-                            d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z" />
-                    </svg>
-                    <p>Save for Later</p>
-                    <div id="count-buttons">
-                        <button>-</button><span>1</span>
-                        <button>+</button>
+                    <div class="info-management">
+                        <div class="info">
+                            <p><b>Mechanical Keyboard</b></p>
+                            <p>Switch: Cherry MX Brown | Color: White</p>
+                        </div>
+                        <div class="management">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-trash">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                            </svg>
+                            <p>Remove</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-heart">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z" />
+                            </svg>
+                            <p>Save for Later</p>
+                        </div>
+                    </div>
+                    <div class="price-count">
+                        <p>$89</p>
+                        <div class="count-buttons">
+                            <button>-</button><span>1</span>
+                            <button>+</button>
+                        </div>
                     </div>
                 </div>
+
                 <div id="also-like">
-                    <h2>Yout might also like</h2>
+                    <h2>You might also like</h2>
                     <div id="recomendations">
-                        <div class="recomendations-cards"><img src="img/DeskLamp.png" alt="DeskLamp"><b>Desk Lamp</b> $45</div>
-                        <div class="recomendations-cards"><img src="img/MonitorStand.png" alt="MonitorStand"><b>Monitor Stand</b> $32</div>
-                        <div class="recomendations-cards"><img src="img/XLMousePad.png" alt="XLMousePad"><b>XL Mouse Pad</b> $18</div>
-                        <div class="recomendations-cards"><img src="img/CableClips.png" alt="CableClips"><b>Cable Clips</b> $9.99</div>
+                        <div class="recomendations-cards"><img src="img/DeskLamp.png" alt="DeskLamp"><b>Desk Lamp</b>
+                            $45</div>
+                        <div class="recomendations-cards"><img src="img/MonitorStand.png" alt="MonitorStand"><b>Monitor
+                                Stand</b> $32</div>
+                        <div class="recomendations-cards"><img src="img/XLMousePad.png" alt="XLMousePad"><b>XL Mouse
+                                Pad</b> $18</div>
+                        <div class="recomendations-cards"><img src="img/CableClips.png" alt="CableClips"><b>Cable
+                                Clips</b> $9.99</div>
                     </div>
                 </div>
+            </div>
         </section>
 
         <aside>
             <h2>Order Summary</h2>
-            <p>Subtotal $538.00</p>
-            <p>Shipping Free</span></p>
-            <p>Estimated Tax</p>
-            <b><p>Total <span style="color: rgb(0, 28, 128);">$581.4</span></p></b>
-            <input type="text" placeholder="Promo code"> <button id="promoCodeButton"><b>Apply</b></button>
-            <button style="background-color: blue; width: 100%;
-            height: 30px; border-radius: 10%; margin-top: 15px;">Proceed to Checkout -></button>
+            <p>Subtotal <span>$538.00</span></p>
+            <p>Shipping <span>Free</span></p>
+            <p>Estimated Tax <span>$43.40</span></p>
+            <p><b>Total <span style="color: var(--colorAzul);">$581.4</span></b></p>
+            <div>
+                <input type="text" placeholder="Promo code">
+                <button id="promoCodeButton"><b>Apply</b></button>
+            </div>
+            <button class="checkout-button">Proceed to Checkout →</button>
         </aside>
     </article>
 </body>

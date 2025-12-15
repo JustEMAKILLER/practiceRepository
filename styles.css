@@ -1,20 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 :root {
     --colorComponentes: rgb(247, 246, 246);
+    --colorAzul: rgb(0, 28, 128);
+    --colorBotonPromo: rgb(159, 213, 227);
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--font-family);
     background-color: rgb(246, 240, 240);
+    margin: 0;
+    padding-top: 50px;
+    /* Para compensar el nav fixed */
 }
 
 nav {
     justify-content: center;
     position: fixed;
+    top: 0;
     height: 50px;
     display: flex;
     flex-flow: row nowrap;
     background-color: var(--colorComponentes);
     width: 100%;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav img {
@@ -22,12 +34,29 @@ nav img {
     height: 30px;
     max-width: 80px;
     max-height: 80px;
+    cursor: pointer;
 }
 
 #navOptions {
     gap: 5%;
     display: flex;
     align-items: center;
+}
+
+#navOptions p {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+#navOptions p:hover {
+    color: var(--colorAzul);
+}
+
+.nav-icons-container {
+    position: absolute;
+    left: 95%;
+    display: flex;
+    gap: 15px;
 }
 
 #items {
@@ -40,11 +69,98 @@ nav img {
     background-color: var(--colorComponentes);
     display: flex;
     gap: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.items-cards img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.info-management {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 80%;
+    border-right: solid 1px rgba(0, 0, 0, 0.1);
+    padding-right: 15px;
+}
+
+.info {
+    margin-bottom: 15px;
+}
+
+.management {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.management svg {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.management svg:hover {
+    transform: scale(1.1);
+}
+
+.management p {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.price-count {
+    width: 20%;
+    display: flex;
+    gap: 20px;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-count p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.count-buttons {
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.count-buttons button {
+    border: none;
+    background-color: rgb(200, 200, 200);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.count-buttons button:hover {
+    background-color: rgb(180, 180, 180);
+}
+
+.count-buttons span {
+    padding: 0 15px;
+    font-weight: bold;
 }
 
 #articulo {
     display: flex;
-    gap: 25px
+    gap: 25px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #articulo section {
@@ -52,15 +168,79 @@ nav img {
 }
 
 #articulo section h1 {
-    margin-top: 10%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#articulo section p {
+    margin-top: 0;
 }
 
 aside {
-    padding: 10px;
+    padding: 20px;
     background-color: var(--colorComponentes);
     width: 40%;
-    margin-top: 5%;
+    margin-top: 80px;
     height: max-content;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+aside h2 {
+    margin-top: 0;
+}
+
+aside p {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+aside input[type="text"] {
+    width: 65%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#promoCodeButton {
+    color: blue;
+    border-radius: 4px;
+    background-color: var(--colorBotonPromo);
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+#promoCodeButton:hover {
+    background-color: rgb(140, 190, 205);
+}
+
+.checkout-button {
+    background-color: blue;
+    color: white;
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.checkout-button:hover {
+    background-color: var(--colorAzul);
+}
+
+#also-like {
+    margin-top: 40px;
+}
+
+#also-like h2 {
+    margin-bottom: 20px;
 }
 
 #recomendations {
@@ -72,16 +252,27 @@ aside {
 .recomendations-cards {
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
+    background-color: var(--colorComponentes);
+    padding: 15px;
+    border-radius: 8px;
+    width: calc(25% - 15px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.recomendations-cards img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.recomendations-cards b {
+    margin-bottom: 5px;
 }
 
 #logo {
     position: absolute;
-    right: 95%;
-}
-
-#promoCodeButton {
-    color: blue;
-    border-radius: 15%;
-    background-color: rgb(159, 213, 227);
-
+    left: 20px;
 }
