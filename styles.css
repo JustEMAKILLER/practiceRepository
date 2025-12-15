@@ -1,9 +1,10 @@
-:root{
-    --colorComponentes: rgba(245, 226, 226, 0.886);
+:root {
+    --colorComponentes: rgb(247, 246, 246);
 }
 
 body {
-    background-color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(246, 240, 240);
 }
 
 nav {
@@ -14,6 +15,13 @@ nav {
     flex-flow: row nowrap;
     background-color: var(--colorComponentes);
     width: 100%;
+}
+
+nav img {
+    width: 30px;
+    height: 30px;
+    max-width: 80px;
+    max-height: 80px;
 }
 
 #navOptions {
@@ -31,6 +39,7 @@ nav {
 .items-cards {
     background-color: var(--colorComponentes);
     display: flex;
+    gap: 10px;
 }
 
 #articulo {
@@ -47,7 +56,7 @@ nav {
 }
 
 aside {
-    padding:10px;
+    padding: 10px;
     background-color: var(--colorComponentes);
     width: 40%;
     margin-top: 5%;
@@ -57,7 +66,12 @@ aside {
 #recomendations {
     display: flex;
     flex-flow: row wrap;
-    gap: 15px
+    gap: 15px;
+}
+
+.recomendations-cards {
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 #logo {
@@ -65,7 +79,7 @@ aside {
     right: 95%;
 }
 
-#promoCodeButton{
+#promoCodeButton {
     color: blue;
     border-radius: 15%;
     background-color: rgb(159, 213, 227);
