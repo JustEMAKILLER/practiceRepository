@@ -1,0 +1,31 @@
+body{
+background-color:white; 
+}
+button{
+    display: inline-block;
+}
+nav{
+    justify-content: center;
+    position: fixed;
+    height: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: rgb(162, 82, 82);
+    width: 100%;
+}
+
+#navOptions{
+    gap: 5%;
+    display: flex;
+    align-items: center;
+}
+
+#items{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 25px;
+}
+
+.items-cards{
+ background-color: blue;
+}
