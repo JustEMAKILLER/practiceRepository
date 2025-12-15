@@ -19,7 +19,7 @@ nav {
     justify-content: center;
     position: fixed;
     top: 0;
-    height: 50px;
+    height: 60px;
     display: flex;
     flex-flow: row nowrap;
     background-color: var(--colorComponentes);
@@ -57,6 +57,12 @@ nav img {
     left: 95%;
     display: flex;
     gap: 15px;
+}
+
+.nav-icons-container>div {
+    background-color: rgba(128, 128, 128, 0.371);
+    padding: 5px;
+    border-radius: 10px;
 }
 
 #items {
@@ -180,7 +186,7 @@ aside {
     padding: 20px;
     background-color: var(--colorComponentes);
     width: 40%;
-    margin-top: 80px;
+    margin-top: 20px;
     height: max-content;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -256,9 +262,7 @@ aside input[type="text"] {
     background-color: var(--colorComponentes);
     padding: 15px;
     border-radius: 8px;
-    width: calc(25% - 15px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    text-align: left;
 }
 
 .recomendations-cards img {
