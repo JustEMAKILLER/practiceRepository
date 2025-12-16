@@ -107,15 +107,14 @@ nav img {
 
 .management svg {
     cursor: pointer;
+    width: 20px;
     transition: transform 0.2s;
-}
-
-.management svg:hover {
-    transform: scale(1.1);
 }
 
 .management p {
     margin-right: 20px;
+    position: relative;
+    top: 9px;
     cursor: pointer;
 }
 
