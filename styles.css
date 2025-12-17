@@ -15,8 +15,12 @@ body {
     /* Para compensar el nav fixed */
 }
 
+a {
+    text-decoration: none;
+}
+
 nav {
-    justify-content: center;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     height: 60px;
@@ -43,18 +47,18 @@ nav img {
     align-items: center;
 }
 
-#navOptions p {
+#navOptions a {
     cursor: pointer;
     transition: color 0.2s;
+    color: black;
 }
 
-#navOptions p:hover {
+#navOptions a:hover {
     color: var(--colorAzul);
+    text-decoration: underline;
 }
 
 .nav-icons-container {
-    position: absolute;
-    left: 95%;
     display: flex;
     gap: 15px;
 }
@@ -63,6 +67,11 @@ nav img {
     background-color: rgba(128, 128, 128, 0.371);
     padding: 5px;
     border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.nav-icons-container>div:hover{
+    transform: scale(1.05);
 }
 
 #items {
@@ -275,7 +284,6 @@ aside input[type="text"] {
     margin-bottom: 5px;
 }
 
-#logo {
-    position: absolute;
-    left: 20px;
+#logo{
+    cursor: default;
 }
