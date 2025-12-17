@@ -1,3 +1,4 @@
+/* Importacion de fuente externa */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
@@ -286,4 +287,9 @@ aside input[type="text"] {
 
 #logo{
     cursor: default;
+}
+
+#promoDiv{
+    display: flex;
+    flex-direction: row;
 }
